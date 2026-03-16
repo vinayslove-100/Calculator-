@@ -22,23 +22,28 @@ Quick Start (Copy & Paste)
 
 Open your terminal and run these commands one by one.
 
+before make sure to install python
+by this command:-
+ __pkg install python__
+
 1️⃣ Clone the repository
 
-git clone https://github.com/vinayslove-100/Calculator-.git
+__git clone https://github.com/vinayslove-100/Calculator-.git__
 
 
 ---
 
 2️⃣ Go into the project folder
 
-cd Calculator-
+__cd Calculator-__
 
 
 ---
 
 3️⃣ Install required Python modules
 
-pip install sympy
+
+__pip install sympy__
 
 This installs SymPy, which is used to calculate exact trigonometric fractions.
 
@@ -47,16 +52,10 @@ This installs SymPy, which is used to calculate exact trigonometric fractions.
 
 4️⃣ Run the calculator
 
-python calculator.py
+____python calculator.py____
 
 
----
-
-One-Command Setup (Automatic)
-
-You can also run everything at once:
-
-git clone https://github.com/vinayslove-100/Calculator-.git && cd Calculator- && pip install sympy && python calculator.py
+_ _ _ 
 
 This command will:
 
