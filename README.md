@@ -52,20 +52,20 @@ This installs SymPy, which is used to calculate exact trigonometric fractions.
 
 4️⃣ Run the calculator
 
-____python calculator.py____
+____python calse.py____
 
 
 _ _ _ 
 
 one command :--
 
-__pkg install python__
+pkg install python
 
-__gitclonehttps://github.com/vinayslove-100/Calculator-.git__
+gitclonehttps://github.com/vinayslove-100/Calculator-.git
 
-__cd Calculator-__
-__pip install sympy__
-___python calculator.py__
+cd Calculator-
+pip install sympy
+python calse.py
 
 
 This command will:
