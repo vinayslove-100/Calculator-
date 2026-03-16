@@ -57,6 +57,15 @@ ____python calculator.py____
 
 _ _ _ 
 
+one command :--
+
+__pkg install python __
+__git clone https://github.com/vinayslove-100/Calculator-.git__
+__cd Calculator-__
+__pip install sympy__
+___python calculator.py__
+
+
 This command will:
 
 1. Download the project
