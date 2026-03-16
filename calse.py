@@ -1,24 +1,23 @@
 import sys
 import time
-from sympy import sin, cos, tan, sec, csc, cot, pi, simplify
+from sympy import sin, cos, tan, sec, csc, cot, pi, simplify, nsimplify
 
 # typing animation
 def a(text, delay=0.02):
-    text = str(text)
-    for char in text:
+    for char in str(text):
         sys.stdout.write(char)
         sys.stdout.flush()
         time.sleep(delay)
     print()
 
-# convert sqrt → √
-def format_value(x):
-    return str(simplify(x)).replace("sqrt", "√")
+# format sqrt symbol
+def format_value(v):
+    return str(v).replace("sqrt", "√")
 
 # REAL CALCULATOR
 def real():
     while True:
-        a("\nEnter expression (example: 5+3*2) or type 'back': ")
+        a("\nEnter expression (example: 5+3*2) or type 'back'")
         expr = input("> ")
 
         if expr.lower() == "back":
@@ -33,7 +32,7 @@ def real():
 # ROOT FINDER
 def root():
     while True:
-        a("\nEnter number to find square root (or type 'back'): ")
+        a("\nEnter number to find square root (or type 'back')")
         n = input("> ")
 
         if n.lower() == "back":
@@ -49,32 +48,40 @@ def root():
 # TRIGONOMETRY
 def tri():
     while True:
-        a("\nEnter angle in degrees (or type 'back'): ")
+        a("\nEnter angle in degrees (example: 30,45,60) or type 'back'")
         inp = input("> ")
 
         if inp.lower() == "back":
             return
 
         try:
-            angle = float(inp)
+            angle = int(inp)
+
             r = angle * pi / 180
 
-            print("\nTrigonometric Values\n")
+            sinv = simplify(sin(r))
+            cosv = simplify(cos(r))
+            tanv = simplify(tan(r))
+            cscv = simplify(csc(r))
+            secv = simplify(sec(r))
+            cotv = simplify(cot(r))
 
-            print("sin  =", format_value(sin(r)))
-            print("cos  =", format_value(cos(r)))
-            print("tan  =", format_value(tan(r)))
-            print("cosec=", format_value(csc(r)))
-            print("sec  =", format_value(sec(r)))
-            print("cot  =", format_value(cot(r)))
+            print("\nTrigonometric Ratios\n")
+
+            print("sin  =", format_value(sinv))
+            print("cos  =", format_value(cosv))
+            print("tan  =", format_value(tanv))
+            print("cosec=", format_value(cscv))
+            print("sec  =", format_value(secv))
+            print("cot  =", format_value(cotv))
 
         except:
             a("Invalid angle")
 
-# MAIN PROGRAM
+# MAIN MENU
 def main():
 
-    a("\n\tWELCOME TO PYTHON SCIENTIFIC CALCULATOR 🙏\n")
+    a("\n\tWELCOME TO PYTHON SCIENTIFIC CALCULATOR 🙏")
 
     while True:
 
@@ -102,7 +109,6 @@ def main():
             break
 
         else:
-            a("Invalid choice")
+            a("Invalid option")
 
-# run program
 main()
