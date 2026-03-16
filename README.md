@@ -64,7 +64,9 @@ pkg install python
 gitclonehttps://github.com/vinayslove-100/Calculator-.git
 
 cd Calculator-
+
 pip install sympy
+
 python calse.py
 
 
