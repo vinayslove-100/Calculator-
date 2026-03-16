@@ -60,7 +60,9 @@ _ _ _
 one command :--
 
 __pkg install python__
-__git clone https://github.com/vinayslove-100/Calculator-.git__
+
+__gitclonehttps://github.com/vinayslove-100/Calculator-.git__
+
 __cd Calculator-__
 __pip install sympy__
 ___python calculator.py__
